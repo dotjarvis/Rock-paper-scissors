@@ -1,0 +1,73 @@
+/* Body settings */
+body {
+  position: relative;
+  background-color: rgb(217, 215, 229);
+}
+
+/* Split the screen in half */
+.area {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+/* Control the players side */
+.player1 {
+  left: 10px;
+}
+/* Control the opponent side */
+.player2 {
+  right: 10px;
+}
+/* setting left and right details in a centered place */
+.centered {
+  position: relative;
+  top: 60px;
+  text-align: center;
+}
+.h1-round {
+  text-align: center;
+}
+/* setting figure spaces */
+.figure {
+  height: 200px;
+}
+
+.hidden,
+.disappear {
+  display: none;
+}
+/* winners position on screen */
+.winning-class {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  color: rgb(168, 20, 20);
+}
+/* Again posistion on screen */
+.again {
+  position: fixed;
+  font-weight: bold;
+  top: 55%;
+  left: 50%;
+  color: black;
+  padding: 10px;
+
+  cursor: pointer;
+  z-index: 10;
+}
+/* start again position on screen */
+.start {
+  position: fixed;
+  font-weight: bolder;
+  top: 50%;
+  left: 43%;
+  color: black;
+  padding: 30px;
+
+  cursor: pointer;
+  z-index: 10;
+}
