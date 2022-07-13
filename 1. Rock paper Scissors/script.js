@@ -1,16 +1,28 @@
 `use strict`;
 
+const menu = document.querySelector(`.menu`);
+const btnGroup = document.querySelector(`.btn-group`);
+
 const rock = document.querySelector(`.rock`);
 const paper = document.querySelector(`.paper`);
 const scissors = document.querySelector(`.scissors`);
 
 const rounds = document.querySelector(`.round`);
-const overlay = document.querySelector(`.overlay`);
-
 const start = document.querySelector(`.start`);
 const again = document.querySelector(`.again`);
 const score1 = document.querySelector(`.score1`);
 const score2 = document.querySelector(`.score2`);
+
+const close = document.querySelector(`.close`);
+const close1 = document.querySelector(`.close1`);
+const form = document.querySelector(`.form`);
+const btnHome = document.querySelector(`.btn-home`);
+const btnRefresh = document.querySelector(`.btn-ref`);
+const btnPlay = document.querySelector(`.btn-play`);
+const btnRule = document.querySelector(`.btn-rule`);
+const btnDemo = document.querySelector(`.btn-demo`);
+const btnRegister = document.querySelector(`.btn-signup`);
+const rules = document.querySelector(`.rules`);
 
 const randomImg = document.querySelector(`.player2-img`);
 const imageName = document.querySelector(`.player2-pick`);
@@ -158,3 +170,41 @@ function startover() {
     start.classList.add(`hidden`);
   });
 }
+
+// The menu icon on the top left
+menu.addEventListener(`click`, function () {
+  btnGroup.classList.toggle(`hidden`);
+});
+
+btnHome.addEventListener(`click`, function () {
+  btnGroup.classList.add(`hidden`);
+});
+
+btnRefresh.addEventListener(`click`, function () {
+  refresh();
+  score1.textContent = 0;
+  score2.textContent = 0;
+  rounds.textContent = 0;
+  again.classList.add(`hidden`);
+  start.classList.add(`hidden`);
+  btnGroup.classList.add(`hidden`);
+});
+
+btnRegister.addEventListener(`click`, function () {
+  form.classList.remove(`hidden`);
+  btnGroup.classList.add(`hidden`);
+});
+
+btnRule.addEventListener(`mouseover`, function () {
+  console.log(`hover`);
+  rules.classList.toggle(`hidden`);
+});
+// closing the registartion` modal display`
+close.addEventListener(`click`, function () {
+  form.classList.add(`hidden`);
+});
+// Closing the rules `modal display`
+close1.addEventListener(`click`, function () {
+  rules.classList.add(`hidden`);
+  btnGroup.classList.add(`hidden`);
+});
