@@ -5,13 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rokkitt:wght@100;400&display=swap" rel="stylesheet">
     <title>Rock Paper scissors</title>
  
   </head>
   <body >
 
+    
+    <!-- Hidden buttons that are used to navigate the game -->
     <h1 class="h1-round ">Round <span class="round">1</span></h1></span>
+    <i class="fa fa-bars menu" ></i>
+    <div class="btn-group hidden">
+      <button type="button" class="btn btn-home" >HOME</button>
+      <button type="button" class="btn btn-ref">Refresh</button>
+      <button type="button" class="btn btn-play">How to play</button>
+      <button type="button" class="btn btn-rule">Rules</button>
+      <button type="button" class="btn btn-demo">Demo</button> 
+      <button type="button" class="btn btn-signup">Sign-up/sign-in</button>
+    </div>
 
+
+    <!-- Registration details for sighup and sign-in -->
+    <form action="register" method="get" class="form hidden">
+      <button class="close">X</button>
+      <fieldset>
+        <legend>User Details</legend>
+      <label for="userName">User Name</label>
+      <input type="text" name="userName" id="userName" required autofocus>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="e.g info@mail.com" required>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="passoword" placeholder="Password"
+      required>
+      <br>
+      <input type="submit" value="SEND" class="send">
+      </fieldset>
+        <label for="textarea">Requests</label>
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>    <br><br>
+        <input type="submit" value="Submit" class="ok"> 
+    </form>
+
+
+    <!-- For the game rules -->
+    <div class="rules hidden">
+       <button class="close1">X</button>
+      <h1>ROCK-PAPER-SCISSORS</h1>
+      <img src="rps.png" class="rule-image" height="100px" width="100px"
+      alt="Image summarizing the rules">
+      <p>
+       <b>1.</b> The game is played with three possible hand signals that represent a rock, paper, and scissors. <br>
+        <b>2.</b> The rock is a closed fist; paper is a flat hand with fingers and thumb extended and the palm facing downward; and scissors is a fist with the index and middle fingers fully extended toward the opposing player. <br>
+        <b> 3.</b> Rock wins against scissors; paper wins against rock; and scissors wins against paper. <br>
+        <b> 4.</b> If both players throw the same hand signal, it is considered a tie and play resumes until there is a clear winner.
+      </p>
+      
+      <p>
+        The hand signals are given simultaneously by both players. The ritual used to get players in sync with each other so they can deliver their throws simultaneously is called the prime. This action requires retracting the player’s fist from full-arm extension towards the shoulder and then back to full extension. To ensure a fair match the players must be in sync with their primes. Players must determine before play how many times they pump their arms during the prime phase, usually two or three times before the final delivery of their throw.
+        For more about the game click <a href="https://www.pgpedia.com/r/rock-paper-scissors" target="_blank" > here</a>
+      </p>
+    </div>
+
+
+    <!-- Player one sides (left-side)-->
     <div class="area player1 ">
      <div class="centered">
       <h1 class="player1-score">Your score <span class="score1">0</span> </h1>
@@ -27,9 +84,12 @@
        <h1 class="player1-imgName">  </h1>
       </div>
     </div>
+    <!-- button again and Start over -->
     <button class="again hidden">AGAIN</button>
     <button class="start hidden">START OVER</button>
 
+
+    <!-- Player two side (right side) -->
     <h1 class="winning-class"> </h1>
     <div class="area player2 ">
        <div class="centered ">
