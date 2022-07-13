@@ -9,7 +9,7 @@ body {
   height: 100%;
   width: 50%;
   position: fixed;
-  z-index: 1;
+  /* z-index: 1; */
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
@@ -18,7 +18,7 @@ body {
 .player1 {
   left: 10px;
 }
-/* Control the opponent side */
+/* Control the player2 side */
 .player2 {
   right: 10px;
 }
@@ -55,7 +55,6 @@ body {
   left: 50%;
   color: black;
   padding: 10px;
-
   cursor: pointer;
   z-index: 10;
 }
@@ -67,7 +66,119 @@ body {
   left: 43%;
   color: black;
   padding: 30px;
-
   cursor: pointer;
   z-index: 10;
+}
+/* styling the menu */
+.menu {
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+}
+/* Styling the button groups */
+.btn-group {
+  position: absolute;
+  top: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+/* Styling a single button for all the buttons */
+.btn {
+  background-color: brown;
+  color: whitesmoke;
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+  width: 120%;
+  height: 3rem;
+  cursor: pointer;
+  z-index: 10;
+  border: none;
+}
+.btn:hover {
+  background-color: rgb(109, 52, 52);
+  transition: 0.6s;
+}
+
+/* styling the form background  */
+.form {
+  background-color: whitesmoke;
+  width: 45%;
+  position: absolute;
+  top: 20px;
+  left: 25%;
+  margin: 30px;
+  padding: 30px;
+  z-index: 10;
+}
+
+/* Styling the form for registration and sign-up  i.e email, password, username*/
+label {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+}
+input {
+  cursor: pointer;
+  z-index: 10;
+  display: block;
+  margin: 10px;
+  margin-left: 0;
+}
+
+/* The reistration styles */
+.ok {
+  position: fixed;
+  left: 70%;
+  bottom: 6%;
+  font-size: 13px;
+  font-weight: bold;
+}
+.send {
+  position: relative;
+  right: 5px;
+}
+.close,
+.close1 {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: block;
+  border: none;
+  border-radius: 5px;
+}
+.send:hover,
+.ok:hover,
+.close:hover,
+.close1:hover {
+  background-color: rgb(89, 125, 128);
+}
+
+/* For the rules section i.e Game play rules */
+.rules {
+  position: absolute;
+  top: 40px;
+  left: 137px;
+  cursor: pointer;
+  z-index: 10;
+  width: 80%;
+  background-color: #fff;
+}
+/* image rule styling */
+.rule-image {
+  float: left;
+  margin-right: 10px;
+}
+.rules h1 {
+  font-family: "Permanent Marker", cursive;
+}
+.rules p {
+  font-family: "Rokkitt", serif;
+  font-size: 1.2em;
+  padding: 8px;
+}
+.close1 {
+  border: none;
 }
